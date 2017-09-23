@@ -12,4 +12,4 @@ git push
 git tag -a $TAG -m "a new release"
 git push origin $TAG
 
-# goreleaser --rm-dist --debug
+goreleaser --rm-dist --debug

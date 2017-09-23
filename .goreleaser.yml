@@ -2,8 +2,8 @@
 #  github:
 #    owner: 'https:'
 #brew:
-#  install: bin.install "go-release-test"
-project_name: go-release-test
+#  install: bin.install "goreleaser-test"
+project_name: goreleaser-test
 builds:
 - goos:
   - linux
@@ -12,7 +12,7 @@ builds:
   goarch:
   - amd64
   main: main.go
-  binary: go-release-test
+  binary: goreleaser-test
   ldflags: -s -w -X main.version={{.Version}} -X main.commit={{.Commit}} -X main.date={{.Date}}
 archive:
   format: tar.gz
@@ -30,11 +30,11 @@ checksum:
 release:
   draft: false
   github:
-    owner: d036242
-    name: go-release-test
-    api_url: https://github.infra.hana.ondemand.com/api/v3/
-    upload_url: https://github.infra.hana.ondemand.com/api/uploads/
-    download_url: https://github.infra.hana.ondemand.com/
+    owner: sklevenz
+    name: goreleaser-test
+    api_url: https://api.github.com
+    upload_url: https://uploads.github.com
+    download_url: https://github.com
 
 brew:
   folder: Formula
@@ -42,12 +42,12 @@ brew:
   homepage: "https://example.com/"
   description: "Software to create fast and easy drum rolls."
   test: |
-    system "#{bin}/go-release-test"
+    system "#{bin}/goreleaser-test"
   install: |
-    bin.install "go-release-test"
+    bin.install "goreleaser-test"
   github:
     owner: cloudfoundry
     name: hombrew-cp-core
-    api_url: https://github.infra.hana.ondemand.com/api/v3/
-    upload_url: https://github.infra.hana.ondemand.com/api/uploads/
-    download_url: https://github.infra.hana.ondemand.com/
+    api_url: https://api.github.com
+    upload_url: https://uploads.github.com
+    download_url: https://github.com
