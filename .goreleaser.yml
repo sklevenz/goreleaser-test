@@ -34,7 +34,7 @@ release:
     name: goreleaser-test
     api_url: https://api.github.com/
     upload_url: https://uploads.github.com/
-    download_url: https://github.com/
+    download_url: https://github.com/x/
 
 brew:
   folder: Formula
