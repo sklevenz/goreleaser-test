@@ -6,14 +6,10 @@ git tag -d $TAG
 git push origin :refs/tags/$TAG
 
 git add .
-git commit -m "dev"
+git commit -m "dev $(date "+DATE: %Y-%m-%d TIME: %H:%M:%S")"
 git push
 
 git tag -a $TAG -m "a new release"
 git push origin $TAG
 
-goreleaser --rm-dist --debug
-
-tree dist
-
-./dist/go-release-test_0.1.0_macOS_64-bit/go-release-test
+# goreleaser --rm-dist --debug
