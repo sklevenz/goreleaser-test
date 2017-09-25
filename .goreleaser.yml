@@ -33,7 +33,7 @@ release:
     owner: sklevenz
     name: goreleaser-test
     api_url: https://api.github.com/
-    upload_url: https://uploads.github.com/
+    uploads_url: https://uploads.github.com/
     download_url: https://github.com/
 
 brew:
@@ -49,5 +49,5 @@ brew:
     owner: sklevenz
     name: homebrew-skl
     api_url: https://api.github.com/
-    upload_url: https://uploads.github.com/
+    uploads_url: https://uploads.github.com/
     download_url: https://github.com/
